@@ -120,6 +120,9 @@ class TxPipelineIntegrationTestFixture
 
       google::protobuf::Empty response;
       irohad->getCommandService()->ToriiAsync(pb_tx, response);
+      // prevent transactions from being reversed
+      //TODO 21/11/17 motxx: Replace this with StatusAsync() after we can use tx status ON_PROCESS.
+      sleep(1);
     }
   }
 
