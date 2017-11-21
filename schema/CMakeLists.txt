@@ -28,6 +28,7 @@ compile_proto_to_grpc_cpp(loader.proto)
 add_library(schema
     block.pb.cc
     commands.pb.cc
+    endpoint.pb.cc
     primitive.pb.cc
     queries.pb.cc
     responses.pb.cc
